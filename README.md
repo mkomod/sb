@@ -1,9 +1,6 @@
 # Simple Blog
 
-A simple and extensible blog written with minimalism in mind. 
-
-
-A small `Makefile` is used to update, upload and preview the website.
+A simple and extensible blog written with minimalism in mind. There's support for formatting LaTeX using MathJax and code blocks using html tags - [example article](./posts/210123.html). A small `Makefile` is used to update, upload and preview the website.
 
 I use this to maintain my [university personal webpage](http://wwwf.imperial.ac.uk/~mk1019/).
 
