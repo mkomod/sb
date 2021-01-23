@@ -12,53 +12,34 @@ $ git clone https://github.com/mkomod/sb
 
 ## Configuration
 
-Open the `Makefile` and add the location to the server you intend to upload content to
+There's only one variable to configure for `sb` and that's the address of your webserver. This is found in the `Makefile`. `sb` uses rsync and SSH to upload content, so for convince you can run `ssh-copy-id` to store your login credentials and allow for passwordless uploads.
 
 ```
 server="user@server.com:/path/to/webpage/directory"
-
-....
 ```
 
-You can change how the pages look by changing `style.css`.
+### Styling 
+
+You can change how pages look by altering `assets/style.css`, `templates/index.html` and `templates/blog.html`. 
 
 ## Functions
 
-### Preview
+#### `$ make preview`
 
-```
-$ make preview
-```
+Starts a python html server and launches index.html. Useful for previewing changes before uploading them.
 
-Starts a python html server and launches index.html
+#### `$ make update`
 
-### Update
+Uodates `index.html` and `blog.html`.
 
-```
-$ make update
-```
-
-Creates `index.html` and `blog.html`.
-
-
-### Upload
-
-```
-$ make upload
-```
-
-or just
-
-```
-$ make
-```
+#### `$ make upload` or `$ make`
 
 Updates `index.html` and `blog.html` and uploads the content to your webserver.
 
 
 ## Adding articles
 
-Article should be named as `YYMMDD.html` ex: `210123.html`. A template is provided in `./posts`
+Article names should be formatted as `YYMMDD.html` ex: `210123.html`. A template is provided in `./posts`
 
 ```
 <article>
