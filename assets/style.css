@@ -13,7 +13,7 @@ body {
 pre {
     border: 1px solid #ddd;
     page-break-inside: avoid;
-    font:1.2em/1.62 monospace;
+    font-family: monospace;
     margin-bottom: 0.5em;
     max-width: 100%;
     overflow: auto;
