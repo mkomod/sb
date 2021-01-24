@@ -1,8 +1,10 @@
 # Simple Blog
 
-A simple and extensible blog written with minimalism in mind. There's support for formatting LaTeX using MathJax and code blocks using html tags - [example article](./posts/210123.html). A small `Makefile` is used to update, upload and preview the website.
+A simple and extensible blog written with minimalism in mind.
 
-I use this to maintain my [university personal webpage](http://wwwf.imperial.ac.uk/~mk1019/).
+There's support for formatting LaTeX and code - [example article](./posts/210123.html). Everything is done using a small `Makefile` and simple commands to preview, update and upload your website. A minimum amount of styling is used for readability and functionality - styling can be extended as needed. 
+
+As an example I use `sb` to maintain my [university personal webpage](http://wwwf.imperial.ac.uk/~mk1019/).
 
 ## Installation
 
@@ -30,12 +32,11 @@ Starts a python html server and launches index.html. Useful for previewing chang
 
 #### `$ make update`
 
-Uodates `index.html` and `blog.html`.
+Updates `index.html` and `blog.html`. The latest article in `./posts` is appended onto `index.html` and all the articles in `./posts` are concatentated in reverse cronological order (newest -> oldest). 
 
 #### `$ make upload` or `$ make`
 
 Updates `index.html` and `blog.html` and uploads the content to your webserver.
-
 
 ## Adding articles
 
@@ -44,7 +45,11 @@ Article names should be formatted as `YYMMDD.html` ex: `210123.html`. A template
 ```
 <article>
     <h4> Title </h4>
-    <p> Content
+    <p> Content including some equations either inline $x=2$ or as a block $$y=x^2$$. You can also include inline <code>print("-")</code> or code blocks
+    
+<pre><code># hello_world.py
+...
+</pre></code>
+
 </article>
 ```
-
