@@ -14,11 +14,15 @@ $ git clone https://github.com/mkomod/sb
 
 ## Configuration
 
-There's only one variable to configure for `sb` and that's the address of your webserver. This is found in the `Makefile`. `sb` uses rsync and SSH to upload content, so for convince you can run `ssh-copy-id` to store your login credentials and allow for passwordless uploads.
+There's only one variable to configure for `sb` and that's the address of your webserver. This is found in the `Makefile`.
 
 ```
 server="user@server.com:/path/to/webpage/directory"
 ```
+
+### Passwordless uploads
+
+`sb` uses rsync and SSH to upload content, for convinience you can run `ssh-copy-id` and follow the steps to store your login credentials and allow for passwordless uploads.
 
 ### Styling 
 
