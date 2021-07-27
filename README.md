@@ -1,32 +1,30 @@
 # Simple Blog
 
-A simple and extensible blog written with minimalism in mind.
+Nothing fancy.
 
-There's support for formatting LaTeX and code - [example article](./posts/210123.html). Everything is done using a small `Makefile` and simple commands to preview, update and upload your website. A minimum amount of styling is used for readability and functionality - styling can be extended as needed. 
-
-As an example I use `sb` to maintain my [university personal webpage](http://wwwf.imperial.ac.uk/~mk1019/).
+---
 
 ## Installation
 
+Clone the repository onto your local computer
+
 ```
-$ git clone https://github.com/mkomod/sb
+git clone https://github.com/mkomod/sb
 ```
+
+---
 
 ## Configuration
 
-There's only one variable to configure for `sb` and that's the address of your webserver. This is found in the `Makefile`.
+Edit `Makefile` and provide the address of your webserver
 
 ```
 server="user@server.com:/path/to/webpage/directory"
 ```
 
-### Passwordless uploads
+Tip: for passwordless uploads run `ssh-copy-id user@server` and follow the instructions.
 
-`sb` uses rsync and SSH to upload content, for convinience you can run `ssh-copy-id` and follow the steps to store your login credentials and allow for passwordless uploads.
-
-### Styling 
-
-You can change how pages look by altering `assets/style.css`, `templates/index.html` and `templates/blog.html`. 
+---
 
 ## Functions
 
@@ -42,9 +40,17 @@ Updates `index.html` and `blog.html`. The latest article in `./posts` is appende
 
 Updates `index.html` and `blog.html` and uploads the content to your webserver.
 
+---
+
+## Appearance
+
+Edit `templates/index.html` and `templates/blog.html` to change how these pages look. To change the styling edit `assets/style.css`.
+
+---
+
 ## Adding articles
 
-Article names should be formatted as `YYMMDD.html` ex: `210123.html`. A template is provided in `./posts`
+Article names should be named by date, e.g. `210123.html`. A template is provided in `./posts`
 
 ```
 <article>
